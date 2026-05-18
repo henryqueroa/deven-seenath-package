@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Built Exclusively for Deven Seenath | Zytrom Marketing Package</title>
+<meta name="description" content="A complete marketing package built by Zytrom for Source of Wealth. Research, angles, ad scripts, VSL outline, and a live landing page rebuild.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #06070a;
+  --surface: #0d0f14;
+  --surface-2: #141821;
+  --accent: #10b981;
+  --accent-hover: #059669;
+  --accent-muted: rgba(16, 185, 129, 0.25);
+  --text: #f5f5f7;
+  --text-muted: #9ca3af;
+  --border: rgba(255, 255, 255, 0.08);
+  --max: 1180px;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Space Grotesk', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  font-size: 17px;
+  overflow-x: hidden;
+}
+h1, h2, h3, h4 { font-family: 'Space Grotesk', sans-serif; line-height: 1.2; font-weight: 600; letter-spacing: -0.01em; }
+.mono { font-family: 'JetBrains Mono', monospace; }
+img { max-width: 100%; height: auto; display: block; }
+.container { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent-hover); }
+
+.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #03110b;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 0.02em;
+  padding: 16px 28px;
+  border-radius: 12px;
+  border: 0;
+  cursor: pointer;
+  transition: background .2s ease, transform .2s ease, box-shadow .2s ease;
+}
+.btn:hover { background: var(--accent-hover); transform: translateY(-2px); box-shadow: 0 12px 32px rgba(16, 185, 129, 0.28); color: #03110b; }
+.btn.lg { padding: 20px 36px; font-size: 17px; }
+
+/* nav */
+nav.top {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(6, 7, 10, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+nav.top .row { display: flex; justify-content: space-between; align-items: center; padding: 16px 0; }
+.brand {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: -0.02em;
+}
+.brand .dot { color: var(--accent); }
+nav .btn { padding: 12px 22px; font-size: 13px; }
+
+/* hero */
+section.hero { padding: 100px 0 80px; text-align: center; background: radial-gradient(800px 400px at 50% 0%, rgba(16, 185, 129, 0.10), transparent 60%); }
+.eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: rgba(16, 185, 129, 0.08);
+  padding: 8px 14px;
+  border: 1px solid var(--accent-muted);
+  border-radius: 999px;
+  margin-bottom: 28px;
+}
+.eyebrow .pulse { width: 8px; height: 8px; background: var(--accent); border-radius: 50%; box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); animation: pulse 2s infinite; }
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); }
+  70% { box-shadow: 0 0 0 12px rgba(16, 185, 129, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); }
+}
+.hero h1 {
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: 700;
+  max-width: 920px;
+  margin: 0 auto 22px;
+}
+.hero h1 .name { color: var(--accent); }
+.hero p.sub {
+  font-size: clamp(17px, 2vw, 20px);
+  color: var(--text-muted);
+  max-width: 700px;
+  margin: 0 auto 38px;
+}
+.brand-row {
+  display: flex; gap: 24px; justify-content: center; align-items: center;
+  font-family: 'JetBrains Mono', monospace; font-size: 14px; color: var(--text-muted);
+  margin-bottom: 38px;
+}
+.brand-row .chip { padding: 10px 18px; border: 1px solid var(--border); border-radius: 999px; background: var(--surface); }
+.brand-row .x { color: var(--accent); }
+
+/* stats */
+section.stats { padding: 60px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); background: var(--surface); }
+.stats-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 24px; text-align: center; }
+.stat-cell .n {
+  font-family: 'JetBrains Mono', monospace;
+  font-weight: 500;
+  font-size: 44px;
+  color: var(--accent);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+.stat-cell .l { color: var(--text-muted); font-size: 14px; letter-spacing: 0.02em; }
+
+/* deliverable accordion */
+section.deliverables { padding: 96px 0; }
+section.deliverables h2 { font-size: clamp(28px, 4vw, 40px); text-align: center; margin-bottom: 14px; }
+section.deliverables .lede { text-align: center; color: var(--text-muted); max-width: 660px; margin: 0 auto 56px; font-size: 18px; }
+
+.acc { max-width: 920px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px; }
+.acc details {
+  background: rgba(13, 15, 20, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+.acc details[open] { border-color: var(--accent-muted); box-shadow: 0 24px 48px rgba(16, 185, 129, 0.08); }
+.acc summary {
+  cursor: pointer;
+  list-style: none;
+  padding: 26px 28px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.acc summary::-webkit-details-marker { display: none; }
+.acc summary .idx { font-family: 'JetBrains Mono', monospace; font-size: 13px; color: var(--accent); min-width: 30px; }
+.acc summary .label { font-weight: 600; font-size: 19px; flex: 1; }
+.acc summary .meta { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--text-muted); }
+.acc summary::after {
+  content: "+";
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 22px;
+  color: var(--accent);
+  margin-left: 12px;
+  transition: transform .25s ease;
+}
+.acc details[open] summary::after { transform: rotate(45deg); }
+.acc .body { padding: 0 28px 28px; color: var(--text-muted); border-top: 1px solid var(--border); padding-top: 24px; margin: 0 0; }
+.acc .body p { margin-bottom: 14px; }
+.acc .body h4 { color: var(--text); font-size: 16px; margin: 20px 0 10px; }
+.acc .body ul { list-style: none; padding: 0; }
+.acc .body li { padding: 8px 0 8px 22px; position: relative; }
+.acc .body li::before { content: "→"; position: absolute; left: 0; color: var(--accent); font-family: 'JetBrains Mono', monospace; }
+.acc .body code { font-family: 'JetBrains Mono', monospace; font-size: 14px; background: var(--surface-2); padding: 2px 8px; border-radius: 4px; color: var(--text); }
+.acc .body .quote { border-left: 3px solid var(--accent); padding: 6px 16px; margin: 14px 0; color: var(--text); font-style: italic; }
+.acc .body .live-link { display: inline-flex; align-items: center; gap: 8px; padding: 12px 18px; background: rgba(16, 185, 129, 0.10); border: 1px solid var(--accent-muted); border-radius: 10px; color: var(--accent); font-family: 'JetBrains Mono', monospace; font-size: 14px; margin-top: 12px; }
+.acc .body .live-link:hover { background: rgba(16, 185, 129, 0.18); }
+
+/* process */
+section.process { padding: 96px 0; background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+section.process h2 { text-align: center; font-size: clamp(28px, 4vw, 40px); margin-bottom: 56px; }
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; max-width: 1080px; margin: 0 auto; }
+.step { padding: 28px; background: var(--surface-2); border: 1px solid var(--border); border-radius: 14px; }
+.step .n { font-family: 'JetBrains Mono', monospace; font-size: 12px; color: var(--accent); letter-spacing: 0.1em; margin-bottom: 14px; }
+.step h3 { font-size: 18px; margin-bottom: 10px; }
+.step p { color: var(--text-muted); font-size: 15px; }
+
+/* final cta */
+section.cta-final { padding: 120px 0; text-align: center; background: radial-gradient(600px 300px at 50% 100%, rgba(16, 185, 129, 0.12), transparent 60%); }
+section.cta-final h2 { font-size: clamp(28px, 4vw, 42px); max-width: 760px; margin: 0 auto 22px; }
+section.cta-final p { color: var(--text-muted); max-width: 600px; margin: 0 auto 38px; font-size: 18px; }
+
+/* footer */
+footer { padding: 36px 0; border-top: 1px solid var(--border); color: var(--text-muted); text-align: center; font-size: 13px; font-family: 'JetBrains Mono', monospace; }
+
+/* reveal */
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity .7s ease, transform .7s ease; }
+.reveal.in { opacity: 1; transform: translateY(0); }
+
+@media (max-width: 720px) {
+  .brand-row { flex-direction: column; gap: 12px; }
+  .acc summary { padding: 22px 20px; }
+  .acc summary .label { font-size: 17px; }
+  .acc .body { padding: 0 20px 22px; padding-top: 20px; }
+}
+</style>
+</head>
+<body>
+
+<nav class="top">
+  <div class="container row">
+    <div class="brand">Zytrom<span class="dot">.</span></div>
+    <a href="https://calendly.com/henryque-zytrom/30min" class="btn" target="_blank" rel="noopener">Book a 20-Minute Call</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow"><span class="pulse"></span>Built Exclusively for Deven Seenath</span>
+    <h1>A complete marketing package, built from scratch for <span class="name">Source of Wealth</span></h1>
+    <p class="sub">Five custom deliverables, a full landing page rebuild, and a 10-email outreach sequence. Designed around the gaps I found in your current funnel.</p>
+    <div class="brand-row">
+      <span class="chip">Zytrom</span>
+      <span class="x">×</span>
+      <span class="chip">Source of Wealth</span>
+    </div>
+    <a href="https://calendly.com/henryque-zytrom/30min" class="btn lg" target="_blank" rel="noopener">Book a 20-Minute Call</a>
+  </div>
+</section>
+
+<section class="stats">
+  <div class="container">
+    <div class="stats-row">
+      <div class="stat-cell"><div class="n" data-count="14">0</div><div class="l">Hours of Research</div></div>
+      <div class="stat-cell"><div class="n" data-count="9">0</div><div class="l">Custom Deliverables</div></div>
+      <div class="stat-cell"><div class="n" data-count="2">0</div><div class="l">Live Pages</div></div>
+      <div class="stat-cell"><div class="n" data-count="5">0</div><div class="l">Gaps Identified</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="deliverables">
+  <div class="container">
+    <h2 class="reveal">Everything I Built for You</h2>
+    <p class="lede reveal">Tap any section to expand. Each piece was built specifically for Source of Wealth, not pulled from a template.</p>
+
+    <div class="acc">
+
+      <details class="reveal">
+        <summary><span class="idx mono">01</span><span class="label">Research Snapshot</span><span class="meta">5 gaps</span></summary>
+        <div class="body">
+          <p>I scraped the apply page, the free-course funnel, and every piece of public press I could find. Then I mapped your funnel end to end and identified five concrete gaps that are leaking revenue right now.</p>
+          <h4>Audience profile</h4>
+          <p>Creators stuck $0-$10k/mo, predominantly male 22-35, US/UK/CA/AU/EU based, working a day job, allergic to being on camera, fatigued from 30+ gurus repeating the same thumbnail advice.</p>
+          <h4>Five gaps I found</h4>
+          <ul>
+            <li><b>Gap 1.</b> No nurture sequence after the free-course opt-in. Warm leads who do not buy the Whop upsell go cold immediately.</li>
+            <li><b>Gap 2.</b> Zero paid ad layer. Your VSL converts. Meta ads against the free course would feed it predictably.</li>
+            <li><b>Gap 3.</b> Thin social proof on the apply page. Names and dollar amounts, no photos, no quotes, no video clips. In a Stage 5 market with a public "scam allegations" video on Google, thin proof costs trust.</li>
+            <li><b>Gap 4.</b> No retargeting pixel I could see. Apply-page traffic that does not convert is wasted.</li>
+            <li><b>Gap 5.</b> No founder bio or FAQ on the apply page. The press footprint (Wedbush wire, 25B views, $110k/mo AdSense) never reaches the people watching the VSL.</li>
+          </ul>
+          <h4>Highest-ROI move</h4>
+          <p>Gap 1. The post-opt-in nurture sequence is the single highest-leverage thing you could ship in the next 14 days. Everything else compounds slower.</p>
+        </div>
+      </details>
+
+      <details class="reveal">
+        <summary><span class="idx mono">02</span><span class="label">Campaign Angles</span><span class="meta">4 angles</span></summary>
+        <div class="body">
+          <p>Four angles, each with a name, a headline, and a 2-3 sentence hook. Built to test against the same audience from different psychological entry points.</p>
+          <h4>1. Trust Score Exploit (Mechanism angle)</h4>
+          <div class="quote">YouTube is not random. There is a hidden score the algorithm assigns to every channel, and three students just used it to go from $0 to $10k/mo in under 8 weeks.</div>
+          <h4>2. $5k to $35k in 11 Weeks (Proof-led)</h4>
+          <div class="quote">Lewis went from $5k/mo to $35k/mo on YouTube without a single new piece of equipment, a new niche, or a new face on camera.</div>
+          <h4>3. Operator, Not Creator (Identity angle)</h4>
+          <div class="quote">The creators making $30k/mo on YouTube are not the most creative people on the platform. They are the most systematic.</div>
+          <h4>4. The Channel That Runs Without You (Anti-burnout angle)</h4>
+          <div class="quote">Adam works 9-to-5 with two kids. His YouTube channel made $10k last month and he filmed zero of the videos.</div>
+        </div>
+      </details>
+
+      <details class="reveal">
+        <summary><span class="idx mono">03</span><span class="label">Ad Script Concepts</span><span class="meta">3 scripts</span></summary>
+        <div class="body">
+          <p>Three short ad scripts in your voice, ready to film as voice-over over b-roll. Direct response, proof-led, and educational. Each script has hook, body, and CTA.</p>
+          <h4>Script 1. Direct response</h4>
+          <p>Opens: "If your YouTube views look like a flat line and your channel makes less than $10k/mo, this is for you." Closes on the free training as the soft CTA.</p>
+          <h4>Script 2. Proof-led</h4>
+          <p>Opens: "Lewis made $5,000 a month for 14 months in a row. Then in 11 weeks he went to $35,000 a month. He did not change his niche, his equipment, or his face." Built around a single named win.</p>
+          <h4>Script 3. Educational</h4>
+          <p>Opens: "Three signals decide whether your YouTube channel makes $100 a month or $30,000 a month. Most creators only know about one of them." Teaches the Trust Score mechanism in 60 seconds, then asks for the click.</p>
+        </div>
+      </details>
+
+      <details class="reveal">
+        <summary><span class="idx mono">04</span><span class="label">Landing Page Rebuild</span><span class="meta">live</span></summary>
+        <div class="body">
+          <p>A full single-page rebuild of your apply page using your existing dark + electric blue palette, Poppins display, and your real proof block. Eleven sections, mobile-first, scroll-reveal animations, FAQ accordion that answers the six questions every cold visitor asks before clicking apply.</p>
+          <h4>What it does differently than your current page</h4>
+          <ul>
+            <li>Founder authority section using the 36 channels, 25B views, $110k/mo AdSense numbers from press</li>
+            <li>FAQ section that addresses the scam allegations question directly with confidence, not deflection</li>
+            <li>Lead magnet block that routes warm-but-not-ready traffic into the free course instead of letting them leave</li>
+            <li>Real proof block restructured into card grid so each named student gets visual weight</li>
+          </ul>
+          <a class="live-link" href="LIVE_LANDING_URL" target="_blank" rel="noopener">View the live page →</a>
+        </div>
+      </details>
+
+      <details class="reveal">
+        <summary><span class="idx mono">05</span><span class="label">VSL Outline</span><span class="meta">6 sections</span></summary>
+        <div class="body">
+          <p>A 12 to 18 minute VSL outline that can be expanded into a full 2,800 to 4,000 word script. Same Trust Score mechanism, restructured to handle the objections I saw on Reddit and YouTube comments about your offer.</p>
+          <h4>The six sections</h4>
+          <ul>
+            <li>Hook (0:00-0:45). Bold claim, pattern interrupt, the one-sentence headline.</li>
+            <li>Problem / agitation (0:45-3:00). Stack five pains in the buyer's own language, then land the diagnosis.</li>
+            <li>Solution / mechanism (3:00-7:00). Name Trust Score, define the three signals, walk through Lewis's $5k to $35k case as the worked example.</li>
+            <li>Credibility (7:00-10:00). Personal, then student wall, then the scam-allegations preempt.</li>
+            <li>Offer overview (10:00-13:00). "Done being a creator" framing. Soft scarcity around the cohort cap.</li>
+            <li>CTA (13:00-14:30). One button. End on a frame, not a hard close.</li>
+          </ul>
+        </div>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+<section class="process">
+  <div class="container">
+    <h2 class="reveal">How I Work</h2>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="n mono">STEP 01</div>
+        <h3>Diagnose</h3>
+        <p>Scrape the funnel. Map the leaks. Find the single bottleneck causing the most damage.</p>
+      </div>
+      <div class="step reveal">
+        <div class="n mono">STEP 02</div>
+        <h3>Position</h3>
+        <p>Sharpen the angle, the mechanism, and the proof so each one carries the next.</p>
+      </div>
+      <div class="step reveal">
+        <div class="n mono">STEP 03</div>
+        <h3>Build</h3>
+        <p>Pages, ads, sequences, scripts. The pieces that actually convert, not the pieces that look pretty.</p>
+      </div>
+      <div class="step reveal">
+        <div class="n mono">STEP 04</div>
+        <h3>Iterate</h3>
+        <p>Watch the numbers. Find the next bottleneck. Fix it. Compound.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-final">
+  <div class="container">
+    <h2 class="reveal">Ready to implement any of this?</h2>
+    <p class="reveal">Everything above was built specifically for Source of Wealth. None of it is for sale. If you want to talk about what implementing it would actually look like, the calendar is open.</p>
+    <a href="https://calendly.com/henryque-zytrom/30min" class="btn lg" target="_blank" rel="noopener">Book a 20-Minute Call</a>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    Built by Zytrom · contact: henryque@zytrom.com
+  </div>
+</footer>
+
+<script>
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+}, { threshold: 0.12 });
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// count up
+const ci = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (!e.isIntersecting) return;
+    const el = e.target;
+    const target = parseInt(el.dataset.count, 10);
+    const dur = 1100, start = performance.now();
+    function tick(now) {
+      const p = Math.min(1, (now - start) / dur);
+      el.textContent = Math.floor(p * target);
+      if (p < 1) requestAnimationFrame(tick);
+      else el.textContent = target;
+    }
+    requestAnimationFrame(tick);
+    ci.unobserve(el);
+  });
+}, { threshold: 0.4 });
+document.querySelectorAll('[data-count]').forEach(el => ci.observe(el));
+</script>
+
+</body>
+</html>
